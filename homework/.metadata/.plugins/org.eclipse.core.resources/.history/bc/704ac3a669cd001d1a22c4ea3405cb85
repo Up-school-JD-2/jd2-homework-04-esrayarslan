@@ -1,0 +1,42 @@
+package musicstore;
+import java.util.ArrayList;
+
+public class Basket {
+	private ArrayList<Song> songs;
+	private ArrayList<Album> albums;
+	private double totalPrice;
+//	private String displayBasket;
+
+	
+	public Basket() {
+        this.songs = new ArrayList<>();
+        this.albums = new ArrayList<>();
+        this.totalPrice = 0.0;
+	}
+	
+        public void addSong(Song song) {
+            songs.add(song);
+            totalPrice += song.getTotalPrice();
+        }
+
+        public void removeSong(Song song) {
+            songs.remove(song);
+            totalPrice -= song.getTotalPrice();
+        }
+
+        public double getTotalPrice() {
+            return totalPrice;
+        }
+
+        public ArrayList<Song> getSongs() {
+            return songs;
+        }
+
+        public void displayBasket() {
+            System.out.println("Sepettekiler:");
+            for (Song song : songs) {
+                System.out.println("- " +  song.getSongName() + " (" + song.getTotalPrice() + ")");
+            }
+            System.out.println("Total price: " + totalPrice);
+        
+    }}

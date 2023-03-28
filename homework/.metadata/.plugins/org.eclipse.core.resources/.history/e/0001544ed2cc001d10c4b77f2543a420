@@ -1,0 +1,121 @@
+package musicstore;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import MusicStore;
+import User;
+
+public class Main {
+
+	    public static void main(String[] args) {
+	    	
+	    }
+	    	Scanner scanner = new Scanner(System.in);
+	        ArrayList<Album> albums = new ArrayList<>();
+	        ArrayList<Song> songs = new ArrayList<>();
+	        ArrayList<User> users = new ArrayList<>();
+	        
+	        
+	      //Albümler
+	        
+	        Album album1 = new Album("Album1", "Teoman", "01.03.1973", null);
+	        Song song1 = (new Song("Rüzgar Gülü", "Teoman", album1, 3.43));
+	        Song song2 = (new Song("İki Yabancı", "Teoman", album1, 2.43));
+	        Song song3 = (new Song("O Yaz", "Teoman", album1, 3.36));
+
+	        Album album2 = new Album("Album2", "Melike Şahin", "04.02.1977", null);
+	        Song song4 = (new Song("Öpmem Lazım", "Melike Şahin", album2, 2.13));
+	        Song song5 = (new Song("Hançer", "Melike Şahin", album2, 4.13));
+	        Song song6 = (new Song("Bedelini Ödedim", "Melike Şahin", album2, 2.02));
+	        
+	        
+	        MusicStore MusicStore = new MusicStore();
+	        
+	        
+	        musicStore.addSong(song1);
+	        musicStore.addSong(song2);
+	        musicStore.addSong(song3);
+	        musicStore.addSong(song4);
+	        musicStore.addSong(song5);
+	        musicStore.addSong(song6);
+	        
+	        musicStore.removeSong(song1);
+	        musicStore.removeSong(song2);
+	        musicStore.removeSong(song3;
+	        musicStore.removeSong(song4);
+	        musicStore.removeSong(song5);
+	        musicStore.removeSong(song6);
+	        
+	   MusicStore.listSongs();
+	       
+	        musicStore.addAlbum(album1);
+	        musicStore.addAlbum(album2);
+	        musicStore.listAulbums();
+
+	        musicStore.addUser(user1);
+	        musicStore.addUser(user2);
+	        musicStore.listUsers();
+	        
+	      
+	        
+	        Item item1 = album1.getSongName("Rüzgar Gülü");
+	        Item item2 = album1.getSongName("iki Yabancı");
+	        Item item3 = album2.getSongName("Öpmem Lazım");
+	        
+	        // Kullanıcılar
+	        
+	        User user1 = new User("Esra", "esra@gmail.com", "abcd");
+	        User user2 = new User("Ayşe", "ayse@gmail.com", "efgh");
+	        
+	       
+
+	       
+	        // Ana menü
+	        while (true) {
+	            System.out.println("------Müzik Mağazası-----");
+	            System.out.println("1. Albümleri Listele");
+	            System.out.println("2. Şarkıları Listele");
+	            System.out.println("3. Albüm Satın Al");
+	            System.out.println("4. Çıkış Yap");
+
+	            int choice = scanner.nextInt();
+
+	            if (choice == 1) {
+	                // Albüm Listesi
+	            	
+	                for (Album album : albums) {
+	                    System.out.println(album.getAlbumName() + " - " + album.getArtistName());
+	                }
+	            } else if (choice == 2) {
+	                // Şarkı Listesi
+	            	
+	                for (Song song : songs) {
+	                    System.out.println(song.getSongName() + " - " + song.getArtistName());
+	                }
+	            } else if (choice == 3) {
+	                // Albüm satın alma
+	            	Basket basket = new Basket();
+	            	Scanner scanner = new Scanner(System.in);
+	                System.out.println("Kullanıcı adını girin: ");
+	                String name = scanner.next();
+	                System.out.println("Parolanızı girin: ");
+	                String password = scanner.next();
+
+	                // Kullanıcı doğrulama
+	                
+	                User user = null;
+	                for (User u : users) {
+	                    if (u.getName().equals(name) && u.getPassword().equals(password)) {
+	                        user = u;
+	                        break;
+	                    }
+	                }
+
+	                if (user != null) {
+	                    System.out.println("Hangi albümü satın almak istiyorsunuz?");
+	                    for (Album album : albums) {
+	                        System.out.println(album.getAlbumName() + " - " + album.getArtistName());
+	                    }
+	                    String albumTitle = scanner.next();
+	       
+}}}}

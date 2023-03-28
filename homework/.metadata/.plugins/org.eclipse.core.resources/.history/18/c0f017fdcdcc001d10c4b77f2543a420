@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+
+public class MusicStore {
+
+	public void createAccount(String name, String email, String password) {
+		
+		
+	}
+
+	public boolean login(String email, String password) {
+		
+		return false;
+	}
+
+	public void showAlbums(ArrayList<Album> albumList) {
+		
+		
+	}
+
+	public Album getAlbum(int albumChoice) {
+		
+		return null;
+	}
+
+	public Basket getBasket(String item, double totalPrice, String displayItem) {
+		
+		return null;
+;
+	}
+
+}

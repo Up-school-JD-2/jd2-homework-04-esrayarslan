@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+
+public class Basket {
+	private ArrayList<Item> items;
+	private double totalPrice;
+	private String item;
+	
+	public Basket() {
+        items = new ArrayList<>();
+        totalPrice = 0.0;
+	
+        public void addItem(Item item) {
+            items.add(item);
+            totalPrice += (item).getTotalPrice();
+        }
+
+        public void removeItem(Item item) {
+            items.remove(item);
+            totalPrice -= item.getTotalPrice();
+        }
+
+        public double getTotalPrice() {
+            return totalPrice;
+        }
+
+        public ArrayList<Item> getItems() {
+            return items;
+        }
+
+        public void displayBasket() {
+            System.out.println("Sepettekiler:");
+            for (Item item : items) {
+                System.out.println("- " + ((item).getAlbumName() + " (" + item.getTotalPrice() + ")");
+            }
+            System.out.println("Total price: " + totalPrice);
+        }
+    }

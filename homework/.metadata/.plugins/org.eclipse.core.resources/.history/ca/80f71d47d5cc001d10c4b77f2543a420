@@ -1,0 +1,107 @@
+package musicstore;
+import java.util.ArrayList;
+import java.util.List;
+
+public class MusicStore {
+	
+	
+	private List<Album> albums ;
+    private List<Song> songs;
+    private List<User> users;
+    
+
+    public MusicStore() {
+        songs= new ArrayList<>();
+        albums = new ArrayList<>();
+        users = new ArrayList<>();
+       
+    }
+
+    public void addAlbum(Album album){
+        this.albums.add(album);
+    }
+
+    public void removeAlbum(Album album){
+        this.albums.remove(album);
+    }
+
+    public void addSong(Song song){
+        this.songs.add(song);
+    }
+    public void addUser(User user){
+        this.users.add(user);
+    }
+    public void removeUser(User user){
+        this.users.remove(user);
+    }
+
+
+    public void listAlbum1(){
+        System.out.println("***********Album 1***************");
+        for (Album album : this.albums){
+            album.printAlbum1Info();
+        }
+    }
+    
+    public void listAlbum2(){
+        System.out.println("***********Album 2***************");
+        for (Album album : this.albums){
+            album.printAlbum2Info();
+        }
+    }
+        
+    public void listSong(){
+        System.out.println("***********Şarkılar****************");
+        for (Song song : this.songs){
+            song.printSongInfo();
+        }
+    }
+
+    public void listUsers(){
+        System.out.println("***********Kullanıcılar****************");
+        for (User user : this.users){
+            user.printUserInfo();
+        }
+    }
+
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+//	public void createAccount(String name, String email, String password) {
+//		
+//		
+//	}
+//
+//	public boolean login(String email, String password) {
+//		
+//		return false;
+//	}
+//
+//	public void showAlbums(ArrayList<Album> albumList) {
+//		
+//		
+//	}
+//
+//	public Album getAlbum(int albumChoice) {
+//		
+//		return null;
+//	}
+//
+//	public Basket getBasket(String item, double totalPrice, String displayItem) {
+//		
+//		return null;
+//;
+//	}
+//
+//}

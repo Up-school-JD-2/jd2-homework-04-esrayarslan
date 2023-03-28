@@ -1,0 +1,100 @@
+package musicstore;
+import java.util.ArrayList;
+import java.util.List;
+
+public class MusicStore {
+	
+	
+	private List<Album> albums ;
+    private List<Song> songs;
+    private List<User> users;
+    private List<Basket> baskets;
+    
+    Basket basket;
+
+    public MusicStore() {
+        this.songs= new ArrayList<>();
+        this.albums = new ArrayList<>();
+        this.users = new ArrayList<>();
+        this.baskets = new ArrayList<>();
+    }
+
+    public void addAlbum(Album album){
+        this.albums.add(album);
+    }
+
+    public void removeAlbum(Album album){
+        this.albums.remove(album);
+    }
+
+    public void addSong(Song song){
+        this.songs.add(song);
+    }
+    public void removeSong(Song song){
+        this.songs.remove(song);
+    }
+    public void addUser(User user){
+        this.users.add(user);
+    }
+    public void removeUser(User user){
+        this.users.remove(user);
+    }
+
+
+    public void listAlbum(){
+        System.out.println("********ALBUMLER*********");
+        for (Album album : this.albums){
+            album.printAlbumInfo();
+        }
+        
+    }
+    public void listSongs() {
+    	System.out.println("********ŞARKILAR*********");
+		for(Song song : this.songs) {
+			song.printSongInfo();
+		}
+		
+	}
+    public void listBasket() {
+    	System.out.println("********ŞARKILAR*********");
+		for(Album album : albums) {
+			basket.printInfoBasket(album);
+		}
+			
+		}
+    
+
+    public void listUsers(){
+        System.out.println("********KULLANICILAR********");
+        for (User user : this.users){
+            user.printUserInfo();
+        }
+    }
+    
+    public void addBasket(Album album) {
+    	
+    	boolean control = false;
+    	
+    	Album album = null;
+		for(Album a : albums) {
+    		if(a.getAlbumName().equals(album));
+			    		basket.add(album);
+    		
+    		System.out.println("----");
+    		album = a;
+    		control = true;
+    		break;
+    	}
+    	if(control == false) {
+    		System.out.println("Albüm Bulunamadı");
+    		
+    	}
+    }
+
+	
+
+}
+	
+	
+	
+

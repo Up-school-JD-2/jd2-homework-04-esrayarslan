@@ -1,0 +1,59 @@
+package musicstore;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Basket {
+	private ArrayList<Song> songs;
+	private ArrayList<Album> albums;
+	private List<Basket> baskets;
+	private double totalPrice = 0.0;
+//	private String displayBasket;
+	
+
+	
+	public Basket(double totalPrice) {
+ 
+       this.totalPrice = totalPrice;
+	}
+	
+        public void addSong(Song song) {
+            songs.add(song);
+            totalPrice += song.getTotalPrice();
+        }
+        public void addBasket(List<Basket> basket) {
+			albums.add((Album) basket);
+			System.out.println("----");
+		}
+        public List<Basket> getBasket() {
+            return baskets;
+        }
+		
+
+        public void removeSong(Song song) {
+            songs.remove(song);
+            totalPrice -= song.getTotalPrice();
+        }
+
+        public double getTotalPrice() {
+            return totalPrice;
+        }
+
+        public ArrayList<Song> getSongs() {
+            return songs;
+        }
+
+        public void displayBasket(Album album) {
+            System.out.println("Sepettekiler:");
+            System.out.println("Album Adı : " + album.getAlbumName());
+            System.out.println("Toplam Fiyat : " + album.getTotalPrice());
+    }
+
+		public void addBasket(Album album) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		
+
+
+}

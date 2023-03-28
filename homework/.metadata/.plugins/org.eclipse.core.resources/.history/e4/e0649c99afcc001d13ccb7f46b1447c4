@@ -1,0 +1,32 @@
+
+public class Basket {
+	private String item;
+	private double totalPrice;
+	private String displayItem;
+	
+	public Basket(String item, double totalPrice, String displayItem) {
+		this.item = item;
+		this.totalPrice = totalPrice;
+		this.displayItem = displayItem;
+	}
+	
+	public String getItem() {
+		return item;
+	}
+	public String setItem(String item) {
+		this.item = item;
+	}
+	public String getDisplayItem() {
+		return displayItem;
+	}
+	public String setDisplayItem(String displayItem) {
+		this.displayItem = displayItem;
+	}
+	public double getTotalPrice() {
+		return totalPrice;
+	}
+	public double setTotalPrice(double totalPrice) {
+		this.totalPrice =totalPrice;
+	}
+
+}

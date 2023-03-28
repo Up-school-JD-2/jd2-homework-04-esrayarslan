@@ -1,0 +1,78 @@
+import java.util.ArrayList;
+
+public class Album<Item> {
+
+
+	    private String albumName;
+	    private String artistName;
+	    private String releaseDate;
+	    private String item;
+	    private ArrayList<Song> songs;
+
+	    public Album(String albumName, String artistName, String releaseDate, String item) {
+	        this.albumName = albumName;
+	        this.artistName = artistName;
+	        this.releaseDate = releaseDate;
+	        this.songs = songs;
+	    }
+
+	   
+
+		public String getAlbumName() {
+	        return albumName;
+	    }
+
+	    public void setAlbumName(String albumName) {
+	        this.albumName = albumName;
+	    }
+
+	    public String getArtistName() {
+	        return artistName;
+	    }
+
+	    public void setArtistName(String artistName) {
+	        this.artistName = artistName;
+	    }
+
+	    public String getReleaseDate() {
+	        return releaseDate;
+	    }
+
+	    public void setReleaseDate(String releaseDate) {
+	        this.releaseDate = releaseDate;
+	    }
+
+	    public ArrayList<Song> getSongs() {
+	        return songs;
+	    }
+
+	    public void setSongs(ArrayList<Song> songs) {
+	        this.songs = songs;
+	    }
+
+		public Song addSong(Song song) {
+	
+			return song;
+			
+		}
+
+		public Item getSongs(String string) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public void printAlbum1Info(){
+	        System.out.println("Müzisyen Adı: " + artistName);
+	        System.out.println("Album Adı: " + albumName);
+	        System.out.println("Yayın Tarihi: " + releaseDate);
+	        System.out.println();
+	    }
+		public void printAlbum2Info(){
+	        System.out.println("Müzisyen Adı: " + artistName);
+	        System.out.println("Album Adı: " + albumName);
+	        System.out.println("Yayın Tarihi: " + releaseDate);
+	        System.out.println();
+	    }
+
+	}
+
+
